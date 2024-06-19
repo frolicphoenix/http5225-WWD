@@ -63,7 +63,7 @@ const funnyForecasts = {
 let weather = {
     "apikey": "3d6c8d17581d485fb3f04952241906",
     fetchWeather: function (city) {
-        fetch("http://api.weatherapi.com/v1/current.json?key=" + this.apikey + "&q=" + city + "&aqi=no")
+        fetch("https://api.weatherapi.com/v1/current.json?key=" + this.apikey + "&q=" + city + "&aqi=no")
             .then((response) => response.json())
             .then((data) => this.displayWeather(data));
     },
