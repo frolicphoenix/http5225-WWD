@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(245, 142, 176);
+    margin: 0;
+    font-size: 120%;
+    background-image: url("https://source.unsplash.com/1600x900/?nature,landscape");
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} 
+
+.card {
+    background-color: black;
+    padding: 2em;
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+    box-shadow: 1px 3px 5px rgba(141, 138, 138, 0.1);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 30px;
+    background-color: #534b4b;
+    color: white;
+    font-size: 120%;
+    width: calc(100% - 100px);
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 3em;
+    width: 3em;
+    outline: none;
+    background-color: #534b4b;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #9b7979;
+}
+
+.weather {
+    font-weight: bold;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading::after {
+    position: absolute;
+    top: 0;
+    color: white;
+    visibility: visible;
+    content: "Page Loading...";
+    font-weight: bold;
+    left: 30px;
+}
+
+h1.city {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+h1.temp {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+    margin-bottom: 0.5em;
+}
+
+.flex .description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.humidity {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.funny-forecast {
+    margin-top: 1em;
+    font-size: 1.1em;
+    color: #d1d1d1;
+}
+
+@media screen and (max-width: 420px) {
+    .card {
+        border-radius: 35px;
+        max-width: 320px;
+    }
+
+    input.search-bar {
+        padding: 0.3em 0.8em;
+        border-radius: 30px;
+        background-color: #534b4b;
+        color: white;
+        width: calc(100% - 100px);
+        letter-spacing: 1px;
+    }
+}

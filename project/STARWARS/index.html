@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Funny Weather App</title>
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" class="search-bar" placeholder="Search for a city">
+            <button>Search</button>
+        </div>
+
+        <div class="weather loading">
+            <h1 class="city">Weather in Toronto</h1>
+            <h1 class="temp">51°C</h1>
+            <div class="flex">
+                <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="" class="icon">
+                <div class="description">Cloudy</div>
+            </div>
+            <div class="humidity">Humidity: 60%</div>
+            <div class="wind">Wind Speed: 6.2 km/hr</div>
+            <div class="funny-forecast"></div>
+        </div>
+    </div>
+
+    <div class="card star-wars">
+        <div class="search">
+            <input type="text" class="search-bar-star-wars" placeholder="Search for a Star Wars planet">
+            <button>Search</button>
+        </div>
+
+        <div class="weather loading">
+            <h1 class="planet">Weather in Tatooine</h1>
+            <h1 class="temp-star-wars">40°C</h1>
+            <div class="flex">
+                <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="" class="icon-star-wars">
+                <div class="description-star-wars">Desert</div>
+            </div>
+            <div class="funny-forecast-star-wars">Sunny with a chance of bantha tracks.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
