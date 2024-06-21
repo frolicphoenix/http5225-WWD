@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "firebase": "^10.6.0",
-    "serve": "^14.2.1"
-  }
-}
