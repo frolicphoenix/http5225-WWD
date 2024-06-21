@@ -1,0 +1,38 @@
+version: "3"
+services:
+  www:
+    image: php:8.3.8-apache
+    volumes:
+      - "./:/var/www/html"
+    ports:
+      - 9999:80
+      - 443:443
+    networks:
+      - demo
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: demo
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: password
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    volumes:
+      - "./db:/docker-entrypoint-initdb.d"
+    networks:
+      - demo
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin:latest
+    ports:
+      - 81:80
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
+    networks:
+      - demo
+networks: 
+  demo:
+    driver: bridge
+
+    
